@@ -17,8 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
     self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-    let parallax: ParallaxViewController = ParallaxViewController()
-    self.window?.rootViewController = parallax
+    //let parallax: ParallaxViewController = ParallaxViewController()
+    //self.window?.rootViewController = parallax
+    let pop: PopAnimationCloneViewController = PopAnimationCloneViewController()
+    self.window?.rootViewController = pop
     self.window?.makeKeyAndVisible()
     
     return true

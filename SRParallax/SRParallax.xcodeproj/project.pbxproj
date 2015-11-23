@@ -14,6 +14,7 @@
 		1407D7AC1BFFBA9800DCD705 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1407D7AA1BFFBA9800DCD705 /* LaunchScreen.storyboard */; };
 		1407D7B41BFFBD5C00DCD705 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1407D7B31BFFBD5C00DCD705 /* Cartography.framework */; };
 		1407D7B71BFFBD9800DCD705 /* Cartography.framework.dSYM in Copy DSYM Files */ = {isa = PBXBuildFile; fileRef = 1407D7B61BFFBD9800DCD705 /* Cartography.framework.dSYM */; };
+		1407D7BB1BFFCDD000DCD705 /* PopAnimationCloneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1407D7BA1BFFCDD000DCD705 /* PopAnimationCloneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +41,7 @@
 		1407D7AD1BFFBA9800DCD705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1407D7B31BFFBD5C00DCD705 /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = ../Carthage/Build/iOS/Cartography.framework; sourceTree = "<group>"; };
 		1407D7B61BFFBD9800DCD705 /* Cartography.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Cartography.framework.dSYM; sourceTree = "<group>"; };
+		1407D7BA1BFFCDD000DCD705 /* PopAnimationCloneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopAnimationCloneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				1407D7A11BFFBA9800DCD705 /* AppDelegate.swift */,
 				1407D7A31BFFBA9800DCD705 /* ParallaxViewController.swift */,
+				1407D7BA1BFFCDD000DCD705 /* PopAnimationCloneViewController.swift */,
 				1407D7A51BFFBA9800DCD705 /* Main.storyboard */,
 				1407D7A81BFFBA9800DCD705 /* Assets.xcassets */,
 				1407D7AA1BFFBA9800DCD705 /* LaunchScreen.storyboard */,
@@ -177,6 +180,7 @@
 			files = (
 				1407D7A41BFFBA9800DCD705 /* ParallaxViewController.swift in Sources */,
 				1407D7A21BFFBA9800DCD705 /* AppDelegate.swift in Sources */,
+				1407D7BB1BFFCDD000DCD705 /* PopAnimationCloneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
