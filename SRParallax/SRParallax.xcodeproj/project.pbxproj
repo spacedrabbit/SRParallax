@@ -15,7 +15,19 @@
 		1407D7B41BFFBD5C00DCD705 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1407D7B31BFFBD5C00DCD705 /* Cartography.framework */; };
 		1407D7B71BFFBD9800DCD705 /* Cartography.framework.dSYM in Copy DSYM Files */ = {isa = PBXBuildFile; fileRef = 1407D7B61BFFBD9800DCD705 /* Cartography.framework.dSYM */; };
 		1407D7BB1BFFCDD000DCD705 /* PopAnimationCloneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1407D7BA1BFFCDD000DCD705 /* PopAnimationCloneViewController.swift */; };
+		147030191C123CC900B6F088 /* SRParallaxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147030181C123CC900B6F088 /* SRParallaxTests.swift */; };
+		147030211C123D6B00B6F088 /* ImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147030201C123D6B00B6F088 /* ImageGenerator.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1470301B1C123CC900B6F088 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1407D7961BFFBA9800DCD705 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1407D79D1BFFBA9800DCD705;
+			remoteInfo = SRParallax;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1407D7B51BFFBD6600DCD705 /* Copy DSYM Files */ = {
@@ -42,6 +54,10 @@
 		1407D7B31BFFBD5C00DCD705 /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = ../Carthage/Build/iOS/Cartography.framework; sourceTree = "<group>"; };
 		1407D7B61BFFBD9800DCD705 /* Cartography.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Cartography.framework.dSYM; sourceTree = "<group>"; };
 		1407D7BA1BFFCDD000DCD705 /* PopAnimationCloneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopAnimationCloneViewController.swift; sourceTree = "<group>"; };
+		147030161C123CC900B6F088 /* SRParallaxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SRParallaxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		147030181C123CC900B6F088 /* SRParallaxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRParallaxTests.swift; sourceTree = "<group>"; };
+		1470301A1C123CC900B6F088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		147030201C123D6B00B6F088 /* ImageGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +66,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1407D7B41BFFBD5C00DCD705 /* Cartography.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		147030131C123CC900B6F088 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +85,7 @@
 				1407D7B61BFFBD9800DCD705 /* Cartography.framework.dSYM */,
 				1407D7B31BFFBD5C00DCD705 /* Cartography.framework */,
 				1407D7A01BFFBA9800DCD705 /* SRParallax */,
+				147030171C123CC900B6F088 /* SRParallaxTests */,
 				1407D79F1BFFBA9800DCD705 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				1407D79E1BFFBA9800DCD705 /* SRParallax.app */,
+				147030161C123CC900B6F088 /* SRParallaxTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +104,7 @@
 			children = (
 				1407D7A11BFFBA9800DCD705 /* AppDelegate.swift */,
 				1407D7A31BFFBA9800DCD705 /* ParallaxViewController.swift */,
+				147030201C123D6B00B6F088 /* ImageGenerator.swift */,
 				1407D7BA1BFFCDD000DCD705 /* PopAnimationCloneViewController.swift */,
 				1407D7A51BFFBA9800DCD705 /* Main.storyboard */,
 				1407D7A81BFFBA9800DCD705 /* Assets.xcassets */,
@@ -86,6 +112,15 @@
 				1407D7AD1BFFBA9800DCD705 /* Info.plist */,
 			);
 			path = SRParallax;
+			sourceTree = "<group>";
+		};
+		147030171C123CC900B6F088 /* SRParallaxTests */ = {
+			isa = PBXGroup;
+			children = (
+				147030181C123CC900B6F088 /* SRParallaxTests.swift */,
+				1470301A1C123CC900B6F088 /* Info.plist */,
+			);
+			path = SRParallaxTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +145,24 @@
 			productReference = 1407D79E1BFFBA9800DCD705 /* SRParallax.app */;
 			productType = "com.apple.product-type.application";
 		};
+		147030151C123CC900B6F088 /* SRParallaxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1470301F1C123CC900B6F088 /* Build configuration list for PBXNativeTarget "SRParallaxTests" */;
+			buildPhases = (
+				147030121C123CC900B6F088 /* Sources */,
+				147030131C123CC900B6F088 /* Frameworks */,
+				147030141C123CC900B6F088 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1470301C1C123CC900B6F088 /* PBXTargetDependency */,
+			);
+			name = SRParallaxTests;
+			productName = SRParallaxTests;
+			productReference = 147030161C123CC900B6F088 /* SRParallaxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -122,6 +175,10 @@
 				TargetAttributes = {
 					1407D79D1BFFBA9800DCD705 = {
 						CreatedOnToolsVersion = 7.1.1;
+					};
+					147030151C123CC900B6F088 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 1407D79D1BFFBA9800DCD705;
 					};
 				};
 			};
@@ -139,6 +196,7 @@
 			projectRoot = "";
 			targets = (
 				1407D79D1BFFBA9800DCD705 /* SRParallax */,
+				147030151C123CC900B6F088 /* SRParallaxTests */,
 			);
 		};
 /* End PBXProject section */
@@ -151,6 +209,13 @@
 				1407D7AC1BFFBA9800DCD705 /* LaunchScreen.storyboard in Resources */,
 				1407D7A91BFFBA9800DCD705 /* Assets.xcassets in Resources */,
 				1407D7A71BFFBA9800DCD705 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		147030141C123CC900B6F088 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,12 +244,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				1407D7A41BFFBA9800DCD705 /* ParallaxViewController.swift in Sources */,
+				147030211C123D6B00B6F088 /* ImageGenerator.swift in Sources */,
 				1407D7A21BFFBA9800DCD705 /* AppDelegate.swift in Sources */,
 				1407D7BB1BFFCDD000DCD705 /* PopAnimationCloneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		147030121C123CC900B6F088 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				147030191C123CC900B6F088 /* SRParallaxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1470301C1C123CC900B6F088 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1407D79D1BFFBA9800DCD705 /* SRParallax */;
+			targetProxy = 1470301B1C123CC900B6F088 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1407D7A51BFFBA9800DCD705 /* Main.storyboard */ = {
@@ -311,6 +393,30 @@
 			};
 			name = Release;
 		};
+		1470301D1C123CC900B6F088 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SRParallaxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SRLabs.swift.SRParallaxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SRParallax.app/SRParallax";
+			};
+			name = Debug;
+		};
+		1470301E1C123CC900B6F088 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SRParallaxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SRLabs.swift.SRParallaxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SRParallax.app/SRParallax";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -328,6 +434,15 @@
 			buildConfigurations = (
 				1407D7B11BFFBA9800DCD705 /* Debug */,
 				1407D7B21BFFBA9800DCD705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1470301F1C123CC900B6F088 /* Build configuration list for PBXNativeTarget "SRParallaxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1470301D1C123CC900B6F088 /* Debug */,
+				1470301E1C123CC900B6F088 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

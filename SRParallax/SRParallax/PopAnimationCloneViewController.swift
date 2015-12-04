@@ -28,8 +28,9 @@ public class PopAnimationCloneViewController: UIViewController {
     self.configureConstraints()
     
     self.animateProgress(self.topDrawingView)
-    //self.drawAFreakinLine(inView: self.bottomDrawingView)
-    self.animateASingleLine(inView: self.bottomDrawingView)
+    //self.animateASingleLine(inView: self.bottomDrawingView)
+    //self.animateACheckMark(inView: self.bottomDrawingView)
+    self.animateCheckMarkWithKeyPathInView(self.bottomDrawingView)
   }
   
   func configureConstraints() {
@@ -142,10 +143,62 @@ public class PopAnimationCloneViewController: UIViewController {
     shapeLayerForLine1.path = line1BezierPath.CGPath
     shapeLayerForLine1.frame = view.frame
     shapeLayerForLine1.strokeColor = UIColor.blueColor().CGColor
+    shapeLayerForLine1.strokeStart = 0.0
+    shapeLayerForLine1.strokeEnd = 0.0
     
     let shapeLayerForLine2: CAShapeLayer = CAShapeLayer()
+    shapeLayerForLine2.path = line2BezierPath.CGPath
+    shapeLayerForLine2.frame = view.frame
+    shapeLayerForLine2.strokeColor = UIColor.redColor().CGColor
+    shapeLayerForLine2.strokeStart = 0.0
+    shapeLayerForLine2.strokeEnd = 0.0
     
+    let animationOnLine1: CABasicAnimation = CABasicAnimation(keyPath: "strokeEnd")
+    animationOnLine1.toValue = 1.0
+    animationOnLine1.duration = 2.0
+    animationOnLine1.autoreverses = true
+    animationOnLine1.repeatCount = HUGE
     
+    let animationOnLine2: CABasicAnimation = CABasicAnimation(keyPath: "strokeEnd")
+    animationOnLine2.toValue = 1.0
+    animationOnLine2.duration = 2.0
+    animationOnLine2.timeOffset = animationOnLine1.duration
+    animationOnLine2.autoreverses = true
+    animationOnLine2.repeatCount = HUGE
+    
+    shapeLayerForLine1.addAnimation(animationOnLine1, forKey: nil)
+    view.layer.addSublayer(shapeLayerForLine1)
+    shapeLayerForLine2.addAnimation(animationOnLine2, forKey: nil)
+    view.layer.addSublayer(shapeLayerForLine2)
+    
+  }
+  
+  func animateCheckMarkWithKeyPathInView(view: UIView) {
+    
+    let line1: (start: CGPoint, end: CGPoint) = (CGPointMake(20.0, 20.0), CGPointMake(40.0, 40.0))
+    let line2: (start: CGPoint, end: CGPoint) = (line1.start, CGPointMake(60.0, 0.0))
+    
+    let linePath: UIBezierPath = UIBezierPath()
+    linePath.moveToPoint(line1.start)
+    linePath.addLineToPoint(line1.end)
+    linePath.addLineToPoint(line2.end)
+    
+    let lineShapeLayer: CAShapeLayer = CAShapeLayer()
+    lineShapeLayer.path = linePath.CGPath
+    lineShapeLayer.strokeColor = UIColor.blueColor().CGColor
+    lineShapeLayer.backgroundColor = UIColor.clearColor().CGColor
+    lineShapeLayer.lineWidth = 8.0
+    lineShapeLayer.fillColor = UIColor.clearColor().CGColor
+    
+    let ref: CGPathRef = linePath.CGPath
+    
+    let keyframeAnimations = CAKeyframeAnimation(keyPath: "stroke")
+    keyframeAnimations.values = [ref]
+    keyframeAnimations.duration = 2.0
+    keyframeAnimations.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+    
+    lineShapeLayer.addAnimation(keyframeAnimations, forKey: nil)
+    view.layer.addSublayer(lineShapeLayer)
   }
   
   lazy var topDrawingView: UIView = {
