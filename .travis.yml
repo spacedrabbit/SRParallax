@@ -6,3 +6,5 @@ xcode_project: SRParallax/SRParallax.xcodeproj
 before_install:
   - brew update
   - brew reinstall xctool
+  - brew install carthage
+  - carthage bootstrap --verbose
